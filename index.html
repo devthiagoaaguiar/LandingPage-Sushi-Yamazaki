@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#FAF8F5" />
+  <meta name="description"
+    content="Yamazaki Sushi — combinados autorais, peixe do dia e a cerimônia do omakase. Fotos, preços, pedidos pelo WhatsApp e reservas." />
+  <title>Yamazaki Sushi — Culinária Japonesa Contemporânea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./yamazaki.css" />
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar" data-testid="navbar">
+    <nav class="nav-inner">
+      <a href="#inicio" class="logo" data-testid="logo-home" aria-label="Yamazaki Sushi — início">
+        <span class="logo-seal">山</span>
+        <span class="logo-text">
+          <span class="logo-name">YAMAZAKI</span>
+          <span class="logo-sub">SUSHI</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#menu" class="nav-link" data-testid="nav-link-menu">Vitrine</a>
+        <a href="#filosofia" class="nav-link" data-testid="nav-link-philosophy">Filosofia</a>
+        <a href="#reservas" class="nav-link" data-testid="nav-link-reservation">Reservas</a>
+      </div>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="cart-open" data-testid="nav-cart-button" aria-label="Abrir pedido">
+          <svg class="ic" viewBox="0 0 24 24">
+            <path d="M6 8h12l-1.2 12.2a1.5 1.5 0 0 1-1.5 1.3H8.7a1.5 1.5 0 0 1-1.5-1.3L6 8z" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+          </svg>
+          <span class="cart-count hidden" id="cart-count" data-testid="nav-cart-count">0</span>
+        </button>
+        <button type="button" class="icon-btn mobile-only" id="nav-mobile-toggle" data-testid="nav-mobile-toggle"
+          aria-label="Abrir menu" aria-expanded="false">
+          <svg class="ic" viewBox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" data-testid="nav-mobile-menu">
+      <a href="#menu" class="mobile-link" data-testid="nav-link-menu-mobile">Vitrine</a>
+      <a href="#filosofia" class="mobile-link" data-testid="nav-link-philosophy-mobile">Filosofia</a>
+      <a href="#reservas" class="mobile-link" data-testid="nav-link-reservation-mobile">Reservas</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" data-testid="hero-section">
+      <span class="hero-kanji" aria-hidden="true" data-parallax="0.05">山崎</span>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-on-load" style="animation-delay:.1s">
+            <span class="eyebrow-line"></span>山崎 · Yamazaki Sushi
+          </p>
+          <h1 class="hero-title">
+            <span class="mask"><span class="line" style="animation-delay:.25s">A arte do sushi,</span></span>
+            <span class="mask"><span class="line" style="animation-delay:.39s">servida com silêncio</span></span>
+            <span class="mask"><span class="line" style="animation-delay:.53s">e precisão.</span></span>
+          </h1>
+          <p class="hero-sub reveal-on-load" style="animation-delay:.85s">
+            Peixe selecionado na madrugada, arroz temperado a cada hora e a cerimônia do omakase no balcão. Bem-vindos
+            ao Yamazaki.
+          </p>
+          <div class="hero-ctas reveal-on-load" style="animation-delay:1s">
+            <a href="#menu" class="btn btn-primary" data-testid="hero-cta-menu">
+              Ver o cardápio
+              <svg class="ic" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+              </svg>
+            </a>
+            <a href="#reservas" class="btn btn-outline" data-testid="hero-cta-reservation">
+              <svg class="ic" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M8 3v4M16 3v4M3 11h18" />
+              </svg>
+              Reservar uma mesa
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal-on-load" style="animation-delay:.4s">
+          <div class="hero-img-wrap" data-parallax="0.08">
+            <img src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?auto=format&fit=crop&w=1600&q=80"
+              alt="Seleção artesanal de sushis Yamazaki" />
+          </div>
+          <div class="hero-card-pos" data-parallax="0.18">
+            <div class="hero-card">
+              <span class="hero-card-icon">料</span>
+              <span>
+                <span class="hero-card-label">Combinado do Chef</span>
+                <span class="hero-card-value">24 peças · R$ 189</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-band" data-testid="marquee-band" aria-label="Destaques Yamazaki">
+      <div class="marquee-track">
+        <div class="marquee-row">
+          <span class="marquee-item">Omakase do Chef</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Peixe do Dia</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Feito à Mão</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Combinados Autorais</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">旬 · Temporada</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Arroz do Momento</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Sake &amp; Matcha</span><span class="marquee-dot">・</span>
+        </div>
+        <div class="marquee-row" aria-hidden="true">
+          <span class="marquee-item">Omakase do Chef</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Peixe do Dia</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Feito à Mão</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Combinados Autorais</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">旬 · Temporada</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Arroz do Momento</span><span class="marquee-dot">・</span>
+          <span class="marquee-item">Sake &amp; Matcha</span><span class="marquee-dot">・</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="menu" data-testid="menu-section">
+      <div class="container">
+        <div class="menu-head">
+          <div class="menu-head-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Vitrine</p>
+            <h2 class="section-title">O cardápio do dia</h2>
+            <p class="section-sub">Fotos, preços e descrições — escolha, monte seu pedido e finalize em segundos pelo
+              WhatsApp.</p>
+          </div>
+          <div class="menu-search reveal" style="transition-delay:.1s">
+            <svg class="ic" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3.5-3.5" />
+            </svg>
+            <input type="text" id="menu-search" data-testid="menu-search-input"
+              placeholder="Buscar prato ou ingrediente…" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="filters reveal" data-testid="menu-filters" style="transition-delay:.15s">
+          <button type="button" class="filter-btn active" data-filter="Todos"
+            data-testid="menu-filter-todos">Todos</button>
+          <button type="button" class="filter-btn" data-filter="Combinados"
+            data-testid="menu-filter-combinados">Combinados</button>
+          <button type="button" class="filter-btn" data-filter="Nigiris &amp; Sashimis"
+            data-testid="menu-filter-nigiris-sashimis">Nigiris &amp; Sashimis</button>
+          <button type="button" class="filter-btn" data-filter="Uramakis &amp; Temakis"
+            data-testid="menu-filter-uramakis-temakis">Uramakis &amp; Temakis</button>
+          <button type="button" class="filter-btn" data-filter="Entradas"
+            data-testid="menu-filter-entradas">Entradas</button>
+          <button type="button" class="filter-btn" data-filter="Bebidas &amp; Sobremesas"
+            data-testid="menu-filter-bebidas-sobremesas">Bebidas &amp; Sobremesas</button>
+        </div>
+
+        <div class="dish-grid" id="dish-grid" data-testid="menu-grid">
+          <article class="dish-card dish-card--featured reveal" data-category="Combinados"
+            data-search="combinado yamazaki omakase seleção exclusiva do dia sashimis de salmão nigiris de atum ebi uramakis hossomakis trufa"
+            data-testid="menu-item-card-combo-yamazaki">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1512132411229-c30391241dd8?auto=format&fit=crop&w=1200&q=80"
+                alt="Combinado Yamazaki Omakase" loading="lazy" />
+              <span class="dish-badge">Destaque do Chef</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">おまかせ</p>
+                  <h3>Combinado Yamazaki Omakase</h3>
+                  <p class="dish-portion">24 peças</p>
+                </div>
+                <span class="dish-price">R$ 189,00</span>
+              </div>
+              <p class="dish-desc">A seleção exclusiva do dia: 6 sashimis de salmão, 4 nigiris de atum, 4 ebi nigiris, 6
+                uramakis especiais e 4 hossomakis de trufa. Servido em sequência, do mais leve ao mais intenso.</p>
+              <button type="button" class="dish-add" data-id="combo-yamazaki" data-name="Combinado Yamazaki Omakase"
+                data-portion="24 peças" data-price="189.00"
+                data-image="https://images.unsplash.com/photo-1512132411229-c30391241dd8?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-combo-yamazaki">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Nigiris &amp; Sashimis"
+            data-search="nigiri maguro trufado atum azeite de trufas brancas flor de sal ouro comestível"
+            data-testid="menu-item-card-nigiri-maguro">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1625668742946-4ade4980c01e?auto=format&fit=crop&w=1200&q=80"
+                alt="Nigiri Maguro Trufado" loading="lazy" />
+              <span class="dish-badge">Premium</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">マグロ握り</p>
+                  <h3>Nigiri Maguro Trufado</h3>
+                  <p class="dish-portion">2 peças</p>
+                </div>
+                <span class="dish-price">R$ 42,00</span>
+              </div>
+              <p class="dish-desc">Atum fresco selecionado, azeite de trufas brancas, flor de sal e lâmina de ouro
+                comestível.</p>
+              <button type="button" class="dish-add" data-id="nigiri-maguro" data-name="Nigiri Maguro Trufado"
+                data-portion="2 peças" data-price="42.00"
+                data-image="https://images.unsplash.com/photo-1625668742946-4ade4980c01e?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-nigiri-maguro">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Nigiris &amp; Sashimis"
+            data-search="sashimi sake usukuri salmão fresco ponzu limão siciliano cebolinha"
+            data-testid="menu-item-card-sashimi-sake">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1607246749106-0a2b287f7245?auto=format&fit=crop&w=1200&q=80"
+                alt="Sashimi Sake Usukuri" loading="lazy" />
+              <span class="dish-badge">Mais Pedido</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">鮭薄造り</p>
+                  <h3>Sashimi Sake Usukuri</h3>
+                  <p class="dish-portion">10 lâminas</p>
+                </div>
+                <span class="dish-price">R$ 68,00</span>
+              </div>
+              <p class="dish-desc">Lâminas finíssimas de salmão fresco com molho ponzu artesanal, raspas de limão
+                siciliano e cebolinha.</p>
+              <button type="button" class="dish-add" data-id="sashimi-sake" data-name="Sashimi Sake Usukuri"
+                data-portion="10 lâminas" data-price="68.00"
+                data-image="https://images.unsplash.com/photo-1607246749106-0a2b287f7245?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-sashimi-sake">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Uramakis &amp; Temakis"
+            data-search="uramaki ebi especial camarão empanado crocante cream cheese salmão maçaricado tarê"
+            data-testid="menu-item-card-uramaki-ebi">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1648146299359-62477a3d5d27?auto=format&fit=crop&w=1200&q=80"
+                alt="Uramaki Ebi Especial" loading="lazy" />
+              <span class="dish-badge">Especial</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">海老裏巻き</p>
+                  <h3>Uramaki Ebi Especial</h3>
+                  <p class="dish-portion">8 peças</p>
+                </div>
+                <span class="dish-price">R$ 56,00</span>
+              </div>
+              <p class="dish-desc">Camarão empanado crocante, cream cheese artesanal, envolto por lâminas de salmão
+                maçaricado e tarê caseiro.</p>
+              <button type="button" class="dish-add" data-id="uramaki-ebi" data-name="Uramaki Ebi Especial"
+                data-portion="8 peças" data-price="56.00"
+                data-image="https://images.unsplash.com/photo-1648146299359-62477a3d5d27?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-uramaki-ebi">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Nigiris &amp; Sashimis"
+            data-search="nigiri de salmão clássico shari maistro nishime" data-testid="menu-item-card-nigiri-salmao">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1562158074-d49fbeffcc91?auto=format&fit=crop&w=1200&q=80"
+                alt="Nigiri de Salmão" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">鮭握り</p>
+                  <h3>Nigiri de Salmão</h3>
+                  <p class="dish-portion">2 peças</p>
+                </div>
+                <span class="dish-price">R$ 32,00</span>
+              </div>
+              <p class="dish-desc">O clássico perfeito: shari no ponto, fatia generosa de salmão grelhado com maistro e
+                nishime leve.</p>
+              <button type="button" class="dish-add" data-id="nigiri-salmao" data-name="Nigiri de Salmão"
+                data-portion="2 peças" data-price="32.00"
+                data-image="https://images.unsplash.com/photo-1562158074-d49fbeffcc91?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-nigiri-salmao">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Uramakis &amp; Temakis"
+            data-search="uramaki dragon crisp arroz crocante camarão abacate cebolinha frita"
+            data-testid="menu-item-card-uramaki-dragon">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1761315414321-e17329d0f74b?auto=format&fit=crop&w=1200&q=80"
+                alt="Uramaki Dragon Crisp" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">龍巻き</p>
+                  <h3>Uramaki Dragon Crisp</h3>
+                  <p class="dish-portion">8 peças</p>
+                </div>
+                <span class="dish-price">R$ 48,00</span>
+              </div>
+              <p class="dish-desc">Arroz crocante por fora, camarão macio, abacate cremoso e cebolinha frita em fio por
+                cima.</p>
+              <button type="button" class="dish-add" data-id="uramaki-dragon" data-name="Uramaki Dragon Crisp"
+                data-portion="8 peças" data-price="48.00"
+                data-image="https://images.unsplash.com/photo-1761315414321-e17329d0f74b?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-uramaki-dragon">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Uramakis &amp; Temakis"
+            data-search="temaki salmão grelhado cone nori crocante arroz quentinho cream cheese"
+            data-testid="menu-item-card-temaki-salmao">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1791386809517-60f40f5372dd?auto=format&fit=crop&w=1200&q=80"
+                alt="Temaki Salmão Grelhado" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">手巻き</p>
+                  <h3>Temaki Salmão Grelhado</h3>
+                  <p class="dish-portion">1 unidade</p>
+                </div>
+                <span class="dish-price">R$ 38,00</span>
+              </div>
+              <p class="dish-desc">Cone de nori crocante montado na hora, salmão grelhado, arroz quentinho, cream cheese
+                e cebolinha.</p>
+              <button type="button" class="dish-add" data-id="temaki-salmao" data-name="Temaki Salmão Grelhado"
+                data-portion="1 unidade" data-price="38.00"
+                data-image="https://images.unsplash.com/photo-1791386809517-60f40f5372dd?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-temaki-salmao">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Nigiris &amp; Sashimis"
+            data-search="sashimi moriawase salmão atum peixe branco do dia gelo"
+            data-testid="menu-item-card-sashimi-moriawase">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1712183718506-41a054650697?auto=format&fit=crop&w=1200&q=80"
+                alt="Sashimi Moriawase" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">盛り合わせ</p>
+                  <h3>Sashimi Moriawase</h3>
+                  <p class="dish-portion">15 lâminas</p>
+                </div>
+                <span class="dish-price">R$ 98,00</span>
+              </div>
+              <p class="dish-desc">Harmonia de salmão, atum e peixe branco do dia, cortados na espessura certa e
+                dispostos em gelo.</p>
+              <button type="button" class="dish-add" data-id="sashimi-moriawase" data-name="Sashimi Moriawase"
+                data-portion="15 lâminas" data-price="98.00"
+                data-image="https://images.unsplash.com/photo-1712183718506-41a054650697?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-sashimi-moriawase">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Entradas"
+            data-search="gyoza artesanal dourada crocante ponzu togarashi" data-testid="menu-item-card-gyoza">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1638502338747-f7f368214cce?auto=format&fit=crop&w=1200&q=80"
+                alt="Gyoza Artesanal" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">餃子</p>
+                  <h3>Gyoza Artesanal</h3>
+                  <p class="dish-portion">5 unidades</p>
+                </div>
+                <span class="dish-price">R$ 28,00</span>
+              </div>
+              <p class="dish-desc">Dourada e crocante por baixo, suculenta por dentro, com molho ponzu de pimenta
+                togarashi.</p>
+              <button type="button" class="dish-add" data-id="gyoza" data-name="Gyoza Artesanal"
+                data-portion="5 unidades" data-price="28.00"
+                data-image="https://images.unsplash.com/photo-1638502338747-f7f368214cce?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-gyoza">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Bebidas &amp; Sobremesas"
+            data-search="duo de sake junmai nigori taças cerâmica artesanal geladas"
+            data-testid="menu-item-card-duo-sake">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1571762450239-f0f047321444?auto=format&fit=crop&w=1200&q=80"
+                alt="Duo de Sake" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">お酒</p>
+                  <h3>Duo de Sake</h3>
+                  <p class="dish-portion">2 taças</p>
+                </div>
+                <span class="dish-price">R$ 64,00</span>
+              </div>
+              <p class="dish-desc">Uma taça de sake junmai seco e uma de nigori suave, servidas geladas em cerâmica
+                artesanal.</p>
+              <button type="button" class="dish-add" data-id="duo-sake" data-name="Duo de Sake" data-portion="2 taças"
+                data-price="64.00"
+                data-image="https://images.unsplash.com/photo-1571762450239-f0f047321444?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-duo-sake">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="Bebidas &amp; Sobremesas"
+            data-search="cheesecake de matcha chá verde ceremonial arroz doce queimado"
+            data-testid="menu-item-card-cheesecake-matcha">
+            <div class="dish-media">
+              <img src="https://images.unsplash.com/photo-1722478347260-5aba978612ff?auto=format&fit=crop&w=1200&q=80"
+                alt="Cheesecake de Matcha" loading="lazy" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <div>
+                  <p class="dish-kanji">抹茶</p>
+                  <h3>Cheesecake de Matcha</h3>
+                  <p class="dish-portion">1 fatia</p>
+                </div>
+                <span class="dish-price">R$ 24,00</span>
+              </div>
+              <p class="dish-desc">Cremosa, com chá verde ceremonial e base crocante de arroz doce queimado.</p>
+              <button type="button" class="dish-add" data-id="cheesecake-matcha" data-name="Cheesecake de Matcha"
+                data-portion="1 fatia" data-price="24.00"
+                data-image="https://images.unsplash.com/photo-1722478347260-5aba978612ff?auto=format&fit=crop&w=400&q=80"
+                data-testid="menu-item-add-cheesecake-matcha">
+                <svg class="ic" viewBox="0 0 24 24">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+                Adicionar ao pedido
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="menu-empty hidden" id="menu-empty" data-testid="menu-empty-state">
+          <svg class="ic" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-3.5-3.5M8.5 8.5l5 5M13.5 8.5l-5 5" />
+          </svg>
+          <p>Nada encontrado para “<span id="menu-empty-query"></span>”. Tente buscar por “salmão” ou limpe os filtros.
+          </p>
+          <button type="button" class="btn-outline small" id="menu-empty-reset" data-testid="menu-empty-reset">Limpar
+            busca</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="filosofia" data-testid="philosophy-section">
+      <div class="container philosophy-grid">
+        <div class="philosophy-visual reveal">
+          <div class="philosophy-img-1" data-parallax="0.06">
+            <img src="https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?auto=format&fit=crop&w=1000&q=80"
+              alt="Mestre sushiman no preparo artesanal" loading="lazy" />
+          </div>
+          <div class="philosophy-img-2" data-parallax="0.12">
+            <img src="https://images.unsplash.com/photo-1553487164-47dd19cf0a72?auto=format&fit=crop&w=1000&q=80"
+              alt="Ambiente minimalista japonês em madeira hinoki" loading="lazy" />
+          </div>
+          <span class="philosophy-kanji" aria-hidden="true">匠</span>
+        </div>
+        <div class="philosophy-copy reveal" style="transition-delay:.12s">
+          <p class="eyebrow"><span class="eyebrow-line"></span>心 · Filosofia</p>
+          <h2 class="section-title">Menos aparato,<br />mais alma.</h2>
+          <p class="philosophy-text">No Yamazaki, a sofisticação mora no detalhe silencioso: o corte certo, o tempero na
+            medida, o tempo respeitado. Nenhuma técnica substitui o ingrediente do dia — ela apenas o escuta.</p>
+          <div class="principles">
+            <div class="principle">
+              <span class="principle-kanji">鮮</span>
+              <div>
+                <h3>Peixe do dia</h3>
+                <p>Selecionamos a matéria-prima toda madrugada; o que não for servido no dia não entra no balcão.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle-kanji">米</span>
+              <div>
+                <h3>Arroz do momento</h3>
+                <p>Shari temperado em pequenos lotes, na temperatura exata do corpo, durante todo o serviço.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle-kanji">和</span>
+              <div>
+                <h3>Harmonia</h3>
+                <p>Cada combinado é uma sequência pensada: do sabor mais leve ao mais intenso, sem pressa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" data-testid="reservation-section">
+      <span class="reservation-kanji" aria-hidden="true">予約</span>
+      <div class="container reservation-grid">
+        <div class="reservation-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span>予約 · Reservas</p>
+          <h2 class="section-title">Guarde sua mesa<br />no balcão.</h2>
+          <p class="reservation-text">Preencha seus dados e, ao confirmar, abriremos o WhatsApp com a reserva pronta
+            para enviar. Para o omakase no balcão, recomendamos reservar com antecedência.</p>
+          <div class="reservation-info">
+            <span data-testid="reservation-hours-info">Ter–Dom · 18h às 23h</span>
+            <span data-testid="reservation-address-info">Av. Coronel Teixeira, 511 — Manaus, Am</span>
+            <span data-testid="reservation-phone-info">+55 92 98261-7123</span>
+          </div>
+        </div>
+
+        <form class="reservation-form reveal" id="reservation-form" data-testid="reservation-form"
+          style="transition-delay:.1s">
+          <label class="span-2">
+            <span class="field-label">Nome</span>
+            <input type="text" name="name" required minlength="2" data-testid="reservation-input-name"
+              placeholder="Como devemos te chamar?" />
+          </label>
+          <label>
+            <span class="field-label">WhatsApp</span>
+            <input type="tel" name="phone" required minlength="8" data-testid="reservation-input-phone"
+              placeholder="(11) 99999-9999" />
+          </label>
+          <label>
+            <span class="field-label">Pessoas</span>
+            <input type="number" name="guests" required min="1" max="20" value="2"
+              data-testid="reservation-input-guests" />
+          </label>
+          <label>
+            <span class="field-label">Data</span>
+            <input type="date" name="date" required data-testid="reservation-input-date" />
+          </label>
+          <label>
+            <span class="field-label">Horário</span>
+            <select name="time" required data-testid="reservation-input-time">
+              <option>18:00</option>
+              <option>18:30</option>
+              <option>19:00</option>
+              <option>19:30</option>
+              <option>20:00</option>
+              <option>20:30</option>
+              <option>21:00</option>
+              <option>21:30</option>
+              <option>22:00</option>
+            </select>
+          </label>
+          <label class="span-2">
+            <span class="field-label">Observações</span>
+            <textarea name="notes" rows="3" data-testid="reservation-input-notes"
+              placeholder="Aniversário, restrições alimentares, omakase no balcão…"></textarea>
+          </label>
+          <button type="submit" class="btn-vermilion span-2" data-testid="reservation-submit-button">Confirmar
+            reserva</button>
+        </form>
+
+        <div class="reservation-success hidden" id="reservation-success" data-testid="reservation-success">
+          <span class="success-check">
+            <svg class="ic" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <h3>Reserva preparada!</h3>
+          <p id="res-success-summary"></p>
+          <p class="success-hint">Toque abaixo para enviar a reserva ao nosso WhatsApp — confirmamos em poucos minutos.
+          </p>
+          <button type="button" class="btn-vermilion" id="res-wa-button" data-testid="reservation-whatsapp-button">
+            <svg class="ic" viewBox="0 0 24 24">
+              <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
+            </svg>
+            Enviar pelo WhatsApp
+          </button>
+          <button type="button" class="link-btn" id="res-reset-button" data-testid="reservation-reset-button">Fazer
+            outra reserva</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-testid="footer-section">
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="logo" data-testid="footer-logo">
+          <span class="logo-seal">山</span>
+          <span class="logo-text">
+            <span class="logo-name">YAMAZAKI</span>
+            <span class="logo-sub">SUSHI</span>
+          </span>
+        </a>
+        <p class="footer-tagline">A arte do sushi, servida com silêncio e precisão.</p>
+        <a class="footer-social" href="https://instagram.com/yamazaki.sushi" target="_blank" rel="noopener noreferrer"
+          data-testid="footer-instagram-link">
+          <svg class="ic" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <path d="M17.5 6.5h.01" />
+          </svg>
+          @yamazaki.sushi
+        </a>
+      </div>
+      <div>
+        <h3 class="footer-heading">Contato</h3>
+        <ul class="footer-list">
+          <li>
+            <svg class="ic" viewBox="0 0 24 24">
+              <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            <span data-testid="footer-address">Av. Coronel Teixeira, 511 — Manaus, AM</span>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24">
+              <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
+            </svg>
+            <a href="https://wa.me/5592982617123" target="_blank" rel="noopener noreferrer"
+              data-testid="footer-whatsapp-link">+55 92 98261-7123</a>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 3" />
+            </svg>
+            <span data-testid="footer-hours">Ter–Dom · 18h às 00h</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-heading">Navegue</h3>
+        <ul class="footer-list footer-nav">
+          <li><a href="#menu" data-testid="footer-link-menu">Cardápio</a></li>
+          <li><a href="#filosofia" data-testid="footer-link-philosophy">Filosofia</a></li>
+          <li><a href="#reservas" data-testid="footer-link-reservation">Reservas</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span data-testid="footer-copyright">© <span id="footer-year"></span> Yamazaki Sushi. Todos os direitos
+        reservados.</span>
+      <span class="footer-kanji">山崎 · よろしくお願いします</span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay hidden" id="cart-overlay" data-testid="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" data-testid="cart-drawer" aria-label="Seu pedido" aria-hidden="true">
+    <div class="cart-head">
+      <h2>
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M6 8h12l-1.2 12.2a1.5 1.5 0 0 1-1.5 1.3H8.7a1.5 1.5 0 0 1-1.5-1.3L6 8z" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+        Seu pedido
+      </h2>
+      <button type="button" class="icon-btn" id="cart-close" data-testid="cart-close-button" aria-label="Fechar pedido">
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-empty" id="cart-empty" data-testid="cart-empty-state">
+      <span class="cart-empty-kanji">空</span>
+      <p class="cart-empty-title">Seu pedido está vazio</p>
+      <p class="cart-empty-text">Explore a vitrine e adicione seus pratos favoritos para finalizar pelo WhatsApp.</p>
+      <button type="button" class="btn-ink" id="cart-empty-menu" data-testid="cart-empty-go-menu">Ver o
+        cardápio</button>
+    </div>
+
+    <ul class="cart-lines hidden" id="cart-lines"></ul>
+
+    <div class="cart-footer hidden" id="cart-footer">
+      <div class="cart-modes" data-testid="cart-mode-toggle">
+        <button type="button" class="mode-btn active" data-mode="delivery"
+          data-testid="cart-mode-delivery">Entrega</button>
+        <button type="button" class="mode-btn" data-mode="pickup" data-testid="cart-mode-pickup">Retirada</button>
+      </div>
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span class="cart-subtotal" id="cart-subtotal" data-testid="cart-subtotal">R$ 0,00</span>
+      </div>
+      <button type="button" class="btn-vermilion wide" id="cart-checkout" data-testid="cart-whatsapp-checkout">
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" />
+        </svg>
+        Finalizar pelo WhatsApp
+      </button>
+      <p class="cart-hint">Seu pedido será aberto no WhatsApp com os itens e o total prontos para envio.</p>
+    </div>
+  </aside>
+
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="./yamazaki.js"></script>
+</body>
+
+</html>
